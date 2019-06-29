@@ -4,8 +4,9 @@ import { MainComponent } from './main/main.component'
 import { DetailComponent } from './main/detail/detail.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'main', pathMatch: 'full' },
   { path: 'main', component: MainComponent },
-  { path: 'detail', component: DetailComponent }
+  { path: 'detail/:id', component: DetailComponent }
 ];
 
 @NgModule({
