@@ -5,17 +5,27 @@
     </mat-card-header>
     <div class="middle">
       <mat-form-field>
-        <input matInput placeholder="account" />
+        <input
+          matInput
+          placeholder="account"
+          [value]="account"
+          (input)="account = $event.target.value"
+        />
       </mat-form-field>
     </div>
     <div class="middle">
       <mat-form-field>
-        <input matInput placeholder="pasword" />
+        <input
+          matInput
+          placeholder="pasword"
+          [value]="password"
+          (input)="password = $event.target.value"
+        />
       </mat-form-field>
     </div>
     <mat-card-actions class="middle">
-      <button mat-button (click)="goToDetailPage()">Sign In</button>
-      <button mat-button (click)="goToDetailPage()">Cancel</button>
+      <button mat-button (click)="onLoginClick()">Sign In</button>
+      <button mat-button (click)="onCancelClick()">Cancel</button>
     </mat-card-actions>
   </mat-card>
 </div>
