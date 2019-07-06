@@ -14,6 +14,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { TopbarComponent } from './topbar/topbar.component';
 import { LoginComponent } from './login/login.component';
 import { MatInputModule } from '@angular/material/input';
+import { GraphQLModule } from './graphql.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MatInputModule } from '@angular/material/input';
     MatInputModule,
     MarkdownModule.forRoot(),
     HttpClientModule,
-    MarkdownModule.forRoot({ loader: HttpClient })
+    MarkdownModule.forRoot({ loader: HttpClient }),
+    GraphQLModule
   ],
   providers: [],
   bootstrap: [AppComponent]
