@@ -1,0 +1,18 @@
+.card {
+  width: 20%;
+}
+
+.root {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
+}

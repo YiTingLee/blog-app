@@ -10,13 +10,19 @@ import { MainComponent } from './main/main.component';
 import { ItemComponent } from './main/item/item.component';
 import { DetailComponent } from './main/detail/detail.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { TopbarComponent } from './topbar/topbar.component';
+import { LoginComponent } from './login/login.component';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     ItemComponent,
-    DetailComponent
+    DetailComponent,
+    TopbarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -24,9 +30,11 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
+    MatToolbarModule,
+    MatInputModule,
     MarkdownModule.forRoot(),
     HttpClientModule,
-    MarkdownModule.forRoot({ loader: HttpClient }),
+    MarkdownModule.forRoot({ loader: HttpClient })
   ],
   providers: [],
   bootstrap: [AppComponent]
