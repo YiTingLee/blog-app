@@ -7,6 +7,7 @@
     </button>
     <ng-template #login>
       <span *ngIf="isLogin()">Hi {{ getUserInfo().name }}</span>
+      <button mat-button (click)="onSignOutClick()">Sign Out</button>
     </ng-template>
   </mat-toolbar-row>
 </mat-toolbar>

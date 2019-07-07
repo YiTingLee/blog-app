@@ -19,6 +19,11 @@ export class TopbarComponent implements OnInit {
     this.router.navigate([`login`]);
   }
 
+  onSignOutClick() {
+    this.router.navigate([`main`]);
+    this.userInfoService.clearUserInfo();
+  }
+
   isLogin() {
     return !!this.userInfoService.isLogin();
   }
