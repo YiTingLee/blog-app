@@ -1,5 +1,17 @@
-<div>
+<div class="root">
+  <textarea
+    class="textarea"
+    matInput
+    [value]="content"
+    (input)="content = $event.target.value"
+  ></textarea>
   <mat-card class="card">
     <markdown [data]="content"></markdown>
   </mat-card>
+</div>
+<div class="button-root">
+  <div class="button-container">
+    <button mat-button (click)="onSaveClick()">Save</button>
+    <button mat-button (click)="onCancelClick()">Cancel</button>
+  </div>
 </div>

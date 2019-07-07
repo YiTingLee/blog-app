@@ -31,4 +31,8 @@ export class TopbarComponent implements OnInit {
   getUserInfo() {
     return this.userInfoService.getUserInfo();
   }
+
+  createPost() {
+    this.router.navigate([`create`]);
+  }
 }

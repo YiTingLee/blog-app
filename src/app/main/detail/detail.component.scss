@@ -3,7 +3,23 @@
   padding: 50px;
 }
 
-div {
+.root {
+  padding-top: 20px;
+  min-height: 70vh;
   display: flex;
   justify-content: center;
+}
+
+.textarea {
+  width: 30%;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.button-root {
+  display: flex;
+  justify-content: center;
+  .button-container {
+    width: 82%;
+  }
 }
