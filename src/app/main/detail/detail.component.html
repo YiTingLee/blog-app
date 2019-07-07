@@ -1,17 +1,42 @@
-<div class="root">
-  <textarea
-    class="textarea"
-    matInput
-    [value]="content"
-    (input)="content = $event.target.value"
-  ></textarea>
-  <mat-card class="card">
-    <markdown [data]="content"></markdown>
-  </mat-card>
-</div>
-<div class="button-root">
-  <div class="button-container">
-    <button mat-button (click)="onSaveClick()">Save</button>
-    <button mat-button (click)="onCancelClick()">Cancel</button>
+<div *ngIf="mode === 'view'; else createAndDetail">
+  <div class="root">
+    <mat-card class="card">
+      <span class="view-title">{{ title }}</span>
+      <mat-divider class="divider"></mat-divider>
+      <markdown [data]="content"></markdown>
+    </mat-card>
   </div>
 </div>
+
+<ng-template #createAndDetail>
+  <div class="detail-root">
+    <div class="title-container">
+      <mat-form-field class="title">
+        <input
+          class="title"
+          matInput
+          placeholder="Title"
+          [value]="title"
+          (input)="title = $event.target.value"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="root">
+    <textarea
+      class="textarea"
+      matInput
+      [value]="content"
+      (input)="content = $event.target.value"
+    ></textarea>
+    <mat-card class="card">
+      <markdown [data]="content"></markdown>
+    </mat-card>
+  </div>
+  <div class="detail-root">
+    <div class="button-container">
+      <button mat-button (click)="onSaveClick()">Save</button>
+      <button mat-button (click)="onCancelClick()">Cancel</button>
+    </div>
+  </div>
+</ng-template>

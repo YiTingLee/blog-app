@@ -35,4 +35,8 @@ export class TopbarComponent implements OnInit {
   createPost() {
     this.router.navigate([`create`]);
   }
+
+  onHeaderClick() {
+    this.router.navigate([`main`]);
+  }
 }

@@ -15,6 +15,7 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { LoginComponent } from './login/login.component';
 import { MatInputModule } from '@angular/material/input';
 import { GraphQLModule } from './graphql.module';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { GraphQLModule } from './graphql.module';
     MatButtonModule,
     MatToolbarModule,
     MatInputModule,
+    MatDividerModule,
     MarkdownModule.forRoot(),
     HttpClientModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
@@ -41,4 +43,4 @@ import { GraphQLModule } from './graphql.module';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

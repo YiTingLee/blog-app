@@ -22,4 +22,41 @@ export class MainComponentService {
       })
       .toPromise();
   }
+
+  public createPost(request: {
+    userId: string;
+    title: string;
+    body: string;
+  }): Promise<any> {
+    return this.apollo
+      .mutate({
+        mutation: gql`
+          mutation($request: PostInfoReq!) {
+            createPost(request: $request)
+          }
+        `,
+        variables: {
+          request: request
+        }
+      })
+      .toPromise();
+  }
+
+  public getPost(request: { id: string; userId: string }): Promise<any> {
+    return this.apollo
+      .query({
+        query: gql`
+          query($request: PostIdReq!) {
+            getPost(request: $request) {
+              id
+              userId
+              body
+              title
+            }
+          }
+        `,
+        variables: { request: request }
+      })
+      .toPromise();
+  }
 }

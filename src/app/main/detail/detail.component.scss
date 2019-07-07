@@ -1,6 +1,6 @@
 .card {
   width: 40%;
-  padding: 50px;
+  padding: 20px 50px 50px 50px;
 }
 
 .root {
@@ -14,12 +14,32 @@
   width: 30%;
   padding: 8px;
   font-size: 16px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
 }
 
-.button-root {
+.detail-root {
   display: flex;
   justify-content: center;
   .button-container {
     width: 82%;
   }
+  .title-container {
+    width: 80%;
+  }
+}
+
+.title {
+  width: 100%;
+}
+
+.view-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.divider {
+  margin-top: 10px;
 }

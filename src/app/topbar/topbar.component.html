@@ -1,6 +1,6 @@
 <mat-toolbar color="primary" class="topbar">
   <mat-toolbar-row>
-    <span>ELog</span>
+    <span class="header" (click)="onHeaderClick()">ELog</span>
     <span class="spacer"></span>
     <button *ngIf="!isLogin(); else login" mat-button (click)="onSignInClick()">
       Sign In
