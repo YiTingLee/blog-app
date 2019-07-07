@@ -42,11 +42,11 @@ export class MainComponentService {
       .toPromise();
   }
 
-  public getPost(request: { id: string; userId: string }): Promise<any> {
+  public getPost(request: { id: string }): Promise<any> {
     return this.apollo
       .query({
         query: gql`
-          query($request: PostIdReq!) {
+          query($request: IdReq!) {
             getPost(request: $request) {
               id
               userId

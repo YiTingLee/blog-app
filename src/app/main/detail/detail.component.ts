@@ -66,8 +66,7 @@ export class DetailComponent implements OnInit {
     const postId = this.router.url.split('detail/')[1];
     this.mainService
       .getPost({
-        id: postId,
-        userId: this.userInfoService.getUserInfo().id
+        id: postId
       })
       .then(({ data }: any) => {
         this.title = data.getPost.title;
