@@ -55,7 +55,8 @@ export class MainComponentService {
             }
           }
         `,
-        variables: { request: request }
+        variables: { request: request },
+        fetchPolicy: 'network-only'
       })
       .toPromise();
   }
