@@ -11,6 +11,7 @@ import { LoginComponentService } from './login.component.service';
 export class LoginComponent implements OnInit {
   account = '';
   password = '';
+  errorMessage = '';
   constructor(
     private router: Router,
     private loginService: LoginComponentService
@@ -21,8 +22,11 @@ export class LoginComponent implements OnInit {
   onLoginClick() {
     this.loginService
       .login({ account: this.account, password: this.password })
-      .then(result => {
-        console.log('check:' + JSON.stringify(result));
+      .then(() => {
+        this.router.navigate([`/main`]);
+      })
+      .catch(() => {
+        this.errorMessage = 'Login error';
       });
   }
 

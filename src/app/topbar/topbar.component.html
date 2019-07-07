@@ -2,6 +2,11 @@
   <mat-toolbar-row>
     <span>ELog</span>
     <span class="spacer"></span>
-    <button mat-button (click)="onSignInClick()">Sign In</button>
+    <button *ngIf="!isLogin(); else login" mat-button (click)="onSignInClick()">
+      Sign In
+    </button>
+    <ng-template #login>
+      <span *ngIf="isLogin()">Hi {{ getUserInfo().name }}</span>
+    </ng-template>
   </mat-toolbar-row>
 </mat-toolbar>

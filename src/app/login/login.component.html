@@ -18,6 +18,7 @@
         <input
           matInput
           placeholder="pasword"
+          type="password"
           [value]="password"
           (input)="password = $event.target.value"
         />
@@ -27,5 +28,8 @@
       <button mat-button (click)="onLoginClick()">Sign In</button>
       <button mat-button (click)="onCancelClick()">Cancel</button>
     </mat-card-actions>
+    <div class="middle">
+      <span class="error-message">{{ errorMessage }}</span>
+    </div>
   </mat-card>
 </div>

@@ -18,4 +18,8 @@ export class UserInfoService {
   public getUserInfo(): UserInfo {
     return this.userInfo;
   }
+
+  public isLogin(): boolean {
+    return !!this.userInfo;
+  }
 }
